@@ -958,7 +958,7 @@ def replace_signature(filename: str, identity: str) -> None:
     identity : str
         The signing identity to use.
     """
-    _run(["codesign", "--force", "--sign", identity, filename], check=True)
+    _run(["codesign", "--force", "-s", identity, filename], check=True)
 
 
 def validate_signature(filename: str) -> None:
